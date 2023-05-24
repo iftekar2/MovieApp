@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <title>Movie Website</title>
+  </head>
+  <body>
+    <section class="navSection">
+      <!--This ise the Nav Section when we are in Laptop View-->
+      <div class="navBar">
+        <h1>Home</h1>
+        <h1>New</h1>
+        <img class="logo" src="./image/old-movie-camera.png" />
+        <h1>Upcoming</h1>
+        <h1>Top Box Office</h1>
+        <div class="searchInput">
+          <input class="input" placeholder="Search" />
+          <button class="buttonToSearch">Search</button>
+        </div>
+        <div class="burgerMenue" onclick="showMobileNav()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="searchIcon" onclick="showSearch()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <!---->
+
+      <!--This section is for Mobile Section-->
+      <section class="mobile">
+        <div class="mobileNav" id="mobileNav">
+          <h1 class="home">Home</h1>
+          <h1 class="new">New</h1>
+          <h1 class="upcoming">Upcoming</h1>
+          <h1 class="topBoxOffice">Top Box Office</h1>
+        </div>
+      </section>
+      <!---->
+    </section>
+
+    <!--This section is for User Input-->
+    <div class="search" id="search">
+      <div class="searchSection" id="searchSection">
+        <input class="inputBox" placeholder="Movie Title" />
+        <button class="searchButton">Search</button>
+      </div>
+    </div>
+    <!---->
+
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!--This Link is for Sliding Images-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0bdb2a0040.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
