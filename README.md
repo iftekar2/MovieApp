@@ -6,4 +6,4 @@ Buttons will have: #BC9EC1;
 Icons will have background color of: #FDE8E9;
 P tags will be: #596475;
 H1 will be: $3C4354;
-Hover effects will have: #FDE8E9;
+Hover effects will have: #d1b0b2;
