@@ -54,12 +54,11 @@ const HomePage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
   height: 740px;
-
   display: flex;
   align-items: center;
   padding-left: 5vw;
+  padding-right: 5vw;
   position: relative;
 `;
 
@@ -67,6 +66,14 @@ const HomePageDetails = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
+
+  @media only screen and (max-width: 430) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Adjust as needed */
+    align-items: flex-start;
+  }
 `;
 
 const Title = styled.div`
@@ -102,15 +109,15 @@ const TitleInfo = styled.div`
 `;
 
 const TitleDescription = styled.div`
-  width: 100%;
+  width: 95%;
   color: white;
   padding-top: 16px;
 
   .title-info-synopsis {
-    width: 530px;
     margin: 0;
     font-size: 16px;
     line-height: 22px;
+    width: 500px;
   }
 
   .title-info-talent {
