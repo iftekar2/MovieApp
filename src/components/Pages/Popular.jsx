@@ -12,10 +12,16 @@ function Popular() {
   );
 }
 
-const PopularPage = styled.div``;
+const PopularPage = styled.div`
+  color: white;
+`;
 
 const PopularComponents = styled.div``;
 
-const PopularTitle = styled.div``;
+const PopularTitle = styled.div`
+  h1 {
+    font-size: 25px;
+  }
+`;
 
 export default Popular;

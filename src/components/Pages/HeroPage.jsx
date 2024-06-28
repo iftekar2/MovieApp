@@ -19,16 +19,20 @@ function HeroPage() {
           <span>Action</span>
         </TitleInfo>
         <TitleDescription>
-          <div className="title-info-synopsis">
-            When a shadowy CIA agent uncovers damning agency secrets, he’s
-            hunted across the globe by a sociopathic rogue operative who’s put a
-            bounty on his head.
+          <div className="title-info">
+            <div className="title-info-synopsis">
+              When a shadowy CIA agent uncovers damning agency secrets, he’s
+              hunted across the globe by a sociopathic rogue operative who’s put
+              a bounty on his head.
+            </div>
           </div>
-          <div className="title-info-talent">
-            <span className="title-data-info-item-label">Starring: </span>
-            <span className="title-data-info-item-list">
-              Ryan Gosling, Chris Evans, Ana de Armas
-            </span>
+          <div className="title-info">
+            <div className="title-info-talent">
+              <span className="title-data-info-item-label">Starring: </span>
+              <span className="title-data-info-item-list">
+                Ryan Gosling, Chris Evans, Ana de Armas
+              </span>
+            </div>
           </div>
         </TitleDescription>
         <PlayButtons>
@@ -68,11 +72,13 @@ const HomePageDetails = styled.div`
   align-items: flex-start;
   width: 100%;
 
-  @media only screen and (max-width: 430) {
+  @media only screen and (max-width: 430px) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; /* Adjust as needed */
     align-items: flex-start;
+    position: fixed;
+    bottom: 150px;
+    margin: auto;
   }
 `;
 
@@ -123,6 +129,24 @@ const TitleDescription = styled.div`
   .title-info-talent {
     padding-top: 16px;
     font-size: 16px;
+  }
+
+  @media only screen and (max-width: 430px) {
+    .title-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title-info-synopsis {
+      width: 300px;
+      text-align: center;
+    }
+
+    .title-info-talent {
+      width: 300px;
+      text-align: center;
+    }
   }
 
   .title-data-info-item-label {
