@@ -3,12 +3,13 @@ import { useState, useEffect } from "react";
 
 function Popular() {
   const [movieData, setMovieData] = useState([]);
+  const autoKey = process.env.REACT_APP_AUTH_KEY;
+
   const options = {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNzhkYjUyOTkzNGRhM2Y1YTc5OGY0YjFmODgzMWI1OCIsIm5iZiI6MTcxOTYyNDQ1OS42OTIzMTUsInN1YiI6IjY0MTIwMzI3ZWRlMWIwMjg1YjY2NDQ4OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sxGPeg3EcYtUWFJhtm1ar8GrwUOt7v0B4cfIhdzmcTk",
+      Authorization: "Bearer " + autoKey,
     },
   };
   useEffect(() => {
@@ -19,7 +20,7 @@ function Popular() {
       .then((response) => response.json())
       .then((response) => setMovieData(response.results))
       .catch((err) => console.error(err));
-  }, []);
+  }, [autoKey]);
 
   return (
     <PopularPage>
