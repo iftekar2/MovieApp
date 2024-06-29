@@ -24,34 +24,30 @@ function Popular() {
 
   return (
     <PopularPage>
-      <PopularComponents>
-        <PopularTitle>
-          <h1>Most Popular</h1>
-        </PopularTitle>
-
-        <PopularMovies>
-          {movieData.map((card, index) => {
-            return (
-              <div key={index}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/` + card.poster_path}
-                />
-              </div>
-            );
-          })}
-        </PopularMovies>
-      </PopularComponents>
+      <PopularTitle>
+        <h1>Most Popular</h1>
+      </PopularTitle>
+      <PopularMovies>
+        {movieData.map((card, index) => {
+          return (
+            <div key={index}>
+              <img
+                className="popularImages"
+                src={`https://image.tmdb.org/t/p/w500/` + card.poster_path}
+              />
+            </div>
+          );
+        })}
+      </PopularMovies>
     </PopularPage>
   );
 }
 
 const PopularPage = styled.div`
   color: white;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-left: 3vw;
+  margin-right: 2vw;
 `;
-
-const PopularComponents = styled.div``;
 
 const PopularTitle = styled.div`
   h1 {
@@ -59,6 +55,18 @@ const PopularTitle = styled.div`
   }
 `;
 
-const PopularMovies = styled.div``;
+const PopularMovies = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+
+  .popularImages {
+    height: 200px;
+    width: 150px;
+    flex-shrink: 0;
+  }
+`;
 
 export default Popular;
