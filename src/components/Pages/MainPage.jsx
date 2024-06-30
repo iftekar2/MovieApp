@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Nav from "../Nav/Nav";
 import HeroPage from "./HeroPage";
-import Popular from "./Popular";
+import NewMovies from "./NewMovies";
 // import MobileFooter from "../Nav/MovileFooter";
 
 function HomePage() {
@@ -9,7 +9,7 @@ function HomePage() {
     <MainPage>
       <Nav />
       <HeroPage />
-      <Popular />
+      <NewMovies />
       {/* <MobileFooter /> */}
     </MainPage>
   );
