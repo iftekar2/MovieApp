@@ -42,7 +42,7 @@ const NavPage = styled.div`
   height: 40px;
 
   @media only screen and (max-width: 430px) {
-    padding: 10px 15px;
+    padding: 10px 10px;
     display: block;
   }
 `;

@@ -64,6 +64,11 @@ const HomePage = styled.div`
   padding-left: 5vw;
   padding-right: 5vw;
   position: relative;
+
+  @media only screen and (max-width: 430px) {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 `;
 
 const HomePageDetails = styled.div`
@@ -74,11 +79,8 @@ const HomePageDetails = styled.div`
 
   @media only screen and (max-width: 430px) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: flex-start;
-    position: fixed;
-    bottom: 150px;
-    margin: auto;
+    margin-bottom: 80px;
   }
 `;
 
